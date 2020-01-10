@@ -1,0 +1,125 @@
+/*
+=======================================
+Table of Contents:
+1. Universal Elements
+2. Text Styles
+3. Media Queries
+=======================================
+*/
+
+/*
+=======================================
+1. Universal Elements
+=======================================
+*/
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: initial;
+}
+
+#body {
+    
+    margin-top: 38%;
+    margin-bottom: 10%
+}
+
+
+
+/*
+=======================================
+2. Text Styles
+=======================================
+*/
+
+.navbar .navbar-brand {
+    font-size: 35px;
+    transition: 0.9s;
+    overflow: hidden;
+}
+
+a {
+    font-size: 25px;
+}
+
+.tab {
+    text-indent: 40px;
+}
+
+#wel {
+    font-size: 150px;
+    color: #284443;
+    position: relative;
+    margin-top: 275px;
+}
+
+/*
+=======================================
+3. Media Queries
+=======================================
+*/
+
+@media (min-width: 768px) {
+    body {
+        background: url(joy.jpg);
+        background-size: cover;
+        background-color: cadetblue;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+
+    #img {
+        width: 300px;
+        position: relative;
+    }
+}
+
+@media (max-width: 764px) {
+
+
+    body {
+        background: url(LA.jpg);
+        background-size: cover;
+        background-color: black;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+
+    #img {
+        width: 300px;
+        position: relative;
+    }
+
+    #med {
+        font-size: 15px;
+    }
+
+
+    #wel {
+        margin-top: 25%;
+        font-size: 50px;
+        color: white;
+    }
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }

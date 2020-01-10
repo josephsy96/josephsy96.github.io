@@ -1,1 +1,2 @@
-# josephsy96.github.io
+# Web-Design-Challenge
+Web Design Homework
