@@ -9,6 +9,12 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
     console.log(top_10);
 
+    let id_total = 0;
+     meta.forEach(function(id_num){
+        id_totals += meta.id;
+    });
+
+    console.log(id_total);
 
 
 });
