@@ -3,10 +3,10 @@ d3.json("Users/josephyi/Documents/josephsy96.github.io/samples.json").then(funct
     
     console.log(sample_data);
 
-    let top_10 = sample_data.sort(function(a,b) {
-        a.metadata - b.metadata});
+    // let top_10 = sample_data.sort(function(a,b) {
+    //     a.metadata - b.metadata});
 
-    console.log(top_10);
+    // console.log(top_10);
 
 
 
