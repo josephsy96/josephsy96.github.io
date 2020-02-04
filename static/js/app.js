@@ -2,18 +2,15 @@
 d3.json("json_data/samples.json").then(function(sample_data) {
     
     console.log(sample_data);
-    let meta = sample_data.metadata
+    let sample = sample_data.samples
 
-    let top_10 = meta.sort(function(a,b) {
+    let top_10 = sample.sort(function(a,b) {
         a.id - b.id});
 
     console.log(top_10);
 
-    let id_total = 0;
-     meta.forEach(function(id_num){
-        id_total += meta.id;
+    let id_total = sample.reduce((a,b) => a + b, 0);
 
         console.log(id_total);
     });
 
-});
