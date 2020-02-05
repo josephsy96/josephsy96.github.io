@@ -17,7 +17,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
         samples_array.push(sample);
 });
 
-init();
+// init();
 
 
 //Append data into dropdown list
