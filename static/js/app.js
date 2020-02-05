@@ -29,7 +29,8 @@ function append_dropdown(id, value) {
     sel_data.html(" ");
 
     value.forEach((n) => {
-        let opt = sel_data.append("options");
+        console.log(n);
+        let opt = sel_data.append("options")
             opt.text(n);
     });
 }
