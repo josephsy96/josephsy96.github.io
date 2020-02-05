@@ -16,18 +16,30 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     let sample = sample_data.samples;
         samples_array.push(sample);
 });
-    
+
+init();
+
 
 //Append data into dropdown list
-function optionChanged() {
-    let select_data = d3.selectAll("#selDataset").node();
+d3.selectAll("#selDataset").on("change", optionChanged);
 
-    for (let n_i = 0; names_array.length; n_i++) {
-        let drop_sel = names_array[n_i];
-        let select = d3.select("select");
-        select.text = drop_sel;
-        select.value = drop_sel;
-        select_data.append(select);
+function optionChanged() {
+    let sel_data = d3.selectAll("select")
+    names_array.forEach((n) => {
+        let opt = sel_data.append("options");
+        Object.entries(n).forEach(([key,value]) => {
+            opt.text(value);
+        })
+    });
+
+
+
+    // for (let n_i = 0; names_array.length; n_i++) {
+    //     let drop_sel = names_array[n_i];
+    //     let select = d3.select("select");
+    //     select.text = drop_sel;
+    //     select.value = drop_sel;
+    //     select_data.append(select);
     }
-}
+
 
