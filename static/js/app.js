@@ -19,13 +19,15 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     
 
 //Append data into dropdown list
-let select_data = d3.select("#selDataset");
+function optionChanged() {
+    let select_data = d3.selectAll("#selDataset").node();
 
-select_data.each(names_array, function(key,value) {
-    let select = d3.select("select", {
-        value: value,
-        text: value
-    });
-    select_data.append(select);
-});
+    for (let n_i = 0; names_array.length; n_i++) {
+        let drop_sel = names_array[n_i];
+        let select = d3.select("select");
+        select.text = drop_sel;
+        select.value = drop_sel;
+        select_data.append(select);
+    }
+}
 
