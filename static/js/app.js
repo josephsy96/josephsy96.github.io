@@ -43,7 +43,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 //     //     select_data.append(select);
 //     }
 
-let sel_data = d3.selectAll("select")
+let sel_data = d3.selectAll("select");
 
     names_array.forEach((n) => {
         let opt = sel_data.append("options");
