@@ -1,11 +1,12 @@
-//Data arrays
-let names_array = [];
-let metadata_array = [];
-let samples_array = [];
+
 
 //Import samples.json
 d3.json("json_data/samples.json").then(function(sample_data) {
-    
+    //Data arrays
+    let names_array = [];
+    let metadata_array = [];
+    let samples_array = [];
+
     //Push Objects into universal arrays
     let names = sample_data.names;
         names_array.push(names);
@@ -20,7 +21,6 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
 
     //Append data into dropdown list
-
     function append_dropdown(id, value) {
         
         let sel_data = d3.select(id);
@@ -29,7 +29,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
         value.forEach((n) => {
             console.log(n);
-            let opt = sel_data.append("options")
+            let opt = sel_data.append("options");
                 opt.text(n);
         });
     }
