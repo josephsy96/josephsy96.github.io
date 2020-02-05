@@ -29,7 +29,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
         value.forEach((n) => {
             console.log(n);
-            let opt = sel_data.append("options");
+            let opt = sel_data.append("option");
                 opt.text(n);
         });
     }
