@@ -29,8 +29,9 @@ function optionChanged() {
         let opt = sel_data.append("options");
         Object.entries(n).forEach(([key,value]) => {
             opt.text(value);
-        })
+        });
     });
+
 
 
 
@@ -42,4 +43,10 @@ function optionChanged() {
     //     select_data.append(select);
     }
 
-
+let sel_data = d3.selectAll("select")
+    names_array.forEach((n) => {
+        let opt = sel_data.append("options");
+        Object.entries(n).forEach(([key,value]) => {
+            opt.text(value);
+        });
+    });
