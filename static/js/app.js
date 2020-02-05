@@ -21,7 +21,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
 
 //Append data into dropdown list
-d3.selectAll("#selDataset").on("change", optionChanged);
+// d3.selectAll("#selDataset").on("change", optionChanged);
 
 // function optionChanged() {
 //     let sel_data = d3.selectAll("select")
