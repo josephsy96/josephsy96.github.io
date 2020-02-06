@@ -71,7 +71,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     }
 
     //Load dropdown
-    append_dropdown("#selDataset", sample_id);
+    append_dropdown("#selDataset", v_names_array);
 
 
 
