@@ -1,5 +1,7 @@
 
-let names_array = [];
+let names;
+let meta;
+let sample;
 
 //Import samples.json
 d3.json("json_data/samples.json").then(function(sample_data) {
@@ -8,7 +10,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     
     //Push Objects into universal arrays
     let names = sample_data.names;
-        names_array.push(names);
+        // names_array.push(names);
 
     let meta = sample_data.metadata;
         // metadata_array.push(meta);
