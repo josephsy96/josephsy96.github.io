@@ -70,7 +70,14 @@ d3.json("json_data/samples.json").then(function(sample_data) {
         let v = d3.select("#selDataset").value;
         console.log(v);
 }
+
+optionChanged();
     
 });
 
 
+// //Update values on change
+// function optionChanged() {
+//     let v = d3.select("#selDataset").value;
+//     console.log(v);
+// }
