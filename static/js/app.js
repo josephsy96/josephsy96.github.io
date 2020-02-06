@@ -4,7 +4,7 @@
 d3.json("json_data/samples.json").then(function(sample_data) {
 
     let selection = d3.select("#selDataset");
-    names_array.push(sample_data.names);
+    
     //Push Objects into universal arrays
     let names = sample_data.names;
         // names_array.push(names);
