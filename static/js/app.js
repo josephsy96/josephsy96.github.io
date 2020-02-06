@@ -7,31 +7,31 @@
 //Import samples.json
 d3.json("json_data/samples.json").then(function(sample_data) {
 
-    let names_array = [];
-    let metadata_array = [];
-    let samples_array = [];
+    // let names_array = [];
+    // let metadata_array = [];
+    // let samples_array = [];
 
     //Push Objects into universal arrays
     let names = sample_data.names;
-        names_array.push(names);
+        // names_array.push(names);
 
     let meta = sample_data.metadata;
-        metadata_array.push(meta);
+        // metadata_array.push(meta);
 
     let sample = sample_data.samples;
-        samples_array.push(sample);
+        // samples_array.push(sample);
     
 //=================================================================
     //log arrays 
-    console.log(names_array);
-    console.log(metadata_array);
-    console.log(samples_array);
+    console.log(names);
+    console.log(meta);
+    console.log(sample);
 //=================================================================
-    let sample_id = [];
+    let name_id = [];
 
-    names_array.forEach((s_id) => {
+    names.forEach((s_id) => {
         console.log(s_id);
-        sample_id.push(s_id);
+        name_id.push(s_id);
     });
  
     console.log(sample_id);
@@ -59,7 +59,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
 //=================================================================
     //Makes the array vertical hopefully...
-    let v_names_array = sliced_values(sample_id);
+    let v_names_array = sliced_values(name_id);
     console.log(v_names_array);
 //=================================================================
     //Append data into dropdown list
@@ -77,7 +77,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     }
 
     //Load dropdown
-    append_dropdown(v_names_array);
+    append_dropdown(names);
 
 
 });
