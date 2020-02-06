@@ -1,4 +1,4 @@
-
+//Declare global variables
 let names;
 let meta;
 let sample;
@@ -9,13 +9,13 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     let selection = d3.select("#selDataset");
     
     //Push Objects into universal arrays
-    let names = sample_data.names;
+    names = sample_data.names;
         // names_array.push(names);
 
-    let meta = sample_data.metadata;
+    meta = sample_data.metadata;
         // metadata_array.push(meta);
 
-    let sample = sample_data.samples;
+    sample = sample_data.samples;
         // samples_array.push(sample);
     
 //=================================================================
@@ -54,24 +54,40 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     console.log(v_names_array);
 //=================================================================
     //Append data into dropdown list
-    function append_dropdown(value) {
+    // function append_dropdown(value) {
         
-        let sel_data = d3.select("#selDataset");
+    //     let sel_data = d3.select("#selDataset");
 
-        value.forEach((n) => {
-            // console.log(n);
-            let opt = sel_data.append("option");
-                opt.text(n);
-        });
-    }
+    //     value.forEach((n) => {
+    //         // console.log(n);
+    //         let opt = sel_data.append("option");
+    //             opt.text(n);
+    //     });
+    // }
 
-    //Load dropdown
-    append_dropdown(names);
+    // //Load dropdown
+    // append_dropdown(names);
 
     
 });
 
-console.log(names_array);
+console.log(names);
+
+ //Append data into dropdown list
+ function append_dropdown(value) {
+        
+    let sel_data = d3.select("#selDataset");
+
+    value.forEach((n) => {
+        // console.log(n);
+        let opt = sel_data.append("option");
+            opt.text(n);
+    });
+}
+
+//Load dropdown
+append_dropdown(names);
+
 
 let selection = d3.select("#selDataset");
 //Update values on change
