@@ -1,9 +1,11 @@
 
+let names_array = [];
+
 //Import samples.json
 d3.json("json_data/samples.json").then(function(sample_data) {
 
     let selection = d3.select("#selDataset");
-
+    names_array.then(sample_data.names);
     //Push Objects into universal arrays
     let names = sample_data.names;
         // names_array.push(names);
@@ -65,6 +67,8 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     append_dropdown(names);
     
 });
+
+console.log(names_array);
 
 //Update values on change
 function optionChanged() {
