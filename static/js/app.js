@@ -73,8 +73,8 @@ console.log(names_array);
 
 let selection = d3.select("#selDataset");
 //Update values on change
-function optionChanged() {
-    let v = d3.select("#selDataset").value;
-    console.log(v);
+function optionChanged(v) {
+    let selection_value = v.value;
+    console.log(selection_value);
 }
 
