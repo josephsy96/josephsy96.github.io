@@ -48,7 +48,7 @@ let belly_data = d3.json("json_data/samples.json").then(function(sample_data) {
     // //Load dropdown
     append_dropdown(names);
 
-    let selection = d3.select("#selDataset");
+    let selection = optionChanged();
     //Update values on change
     function change_value(v) {
         let selection_value = v.value;
