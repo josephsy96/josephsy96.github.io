@@ -78,7 +78,7 @@ console.log(names);
         
     let sel_data = d3.select("#selDataset");
 
-    value.forEach((n) => {
+    value.foreach((n) => {
         // console.log(n);
         let opt = sel_data.append("option");
             opt.text(n);
