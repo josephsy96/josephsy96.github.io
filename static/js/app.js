@@ -55,7 +55,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
         let sel_data = d3.select("#selDataset");
 
         value.forEach((n) => {
-            console.log(n);
+            // console.log(n);
             let opt = sel_data.append("option");
                 opt.text(n);
         });
@@ -64,14 +64,10 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     //Load dropdown
     append_dropdown(names);
     
-
-    function optionChanged() {
-        let v = d3.select("#selDataset").value;
-        console.log(v);
-    }
-
-    
-    
-
 });
 
+//Update values on change
+function optionChanged() {
+    let v = d3.select("#selDataset").value;
+    console.log(v);
+}
