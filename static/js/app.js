@@ -17,7 +17,7 @@ let sample = belly_data.samples;
     //log arrays 
     console.log(names);
     console.log(meta);
-    console.log(sample);
+    console.log(`${sample}`);
 //=================================================================
 
     // //slice array so it's not a long line...
@@ -33,7 +33,6 @@ let sample = belly_data.samples;
     //     }
     //     return sliced_name;
     // }
-
 
 //=================================================================
     //Makes the array vertical hopefully...
