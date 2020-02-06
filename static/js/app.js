@@ -1,15 +1,8 @@
-//Data arrays
-// let names_array = [];
-// let metadata_array = [];
-// let samples_array = [];
-
 
 //Import samples.json
 d3.json("json_data/samples.json").then(function(sample_data) {
 
-    // let names_array = [];
-    // let metadata_array = [];
-    // let samples_array = [];
+    let selection = d3.select("#selDataset");
 
     //Push Objects into universal arrays
     let names = sample_data.names;
@@ -40,12 +33,6 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     function sliced_values(name_list) {
         let iter_value = name_list;
         let sliced_name = [];
-        // iter_value.forEach((nm) => {
-        //     let n_index = iter_value[nm];
-        //     if (sliced_name.indexOf(n_index) == -1) {
-        //         sliced_name.push(n_index);
-        //     }
-        // });
         
         for (let nm = 0; nm < sliced_name.length; nm++) {
             let n_index = iter_value[nm];
@@ -67,8 +54,6 @@ d3.json("json_data/samples.json").then(function(sample_data) {
         
         let sel_data = d3.select("#selDataset");
 
-        // sel_data.html(" ");
-
         value.forEach((n) => {
             console.log(n);
             let opt = sel_data.append("option");
@@ -78,7 +63,15 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
     //Load dropdown
     append_dropdown(names);
+    
 
+    function optionChanged() {
+        let v = d3.select("#selDataset").value;
+        console.log(v);
+    }
+
+    
+    
 
 });
 
