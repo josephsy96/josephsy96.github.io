@@ -1,5 +1,4 @@
 
-let names_array = [];
 
 //Import samples.json
 d3.json("json_data/samples.json").then(function(sample_data) {
@@ -65,13 +64,13 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
     //Load dropdown
     append_dropdown(names);
+
+    //Update values on change
+    function optionChanged() {
+        let v = d3.select("#selDataset").value;
+        console.log(v);
+}
     
 });
 
-console.log(names_array);
 
-//Update values on change
-function optionChanged() {
-    let v = d3.select("#selDataset").value;
-    console.log(v);
-}
