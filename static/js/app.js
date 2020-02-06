@@ -12,7 +12,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
         names_array.push(names);
 
     let meta = sample_data.metadata;
-        // metadata_array.push(meta);
+        metadata_array.push(meta);
 
     let sample = sample_data.samples;
         samples_array.push(sample);
@@ -26,8 +26,8 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     let sample_id = [];
 
     names_array.forEach((s_id) => {
-        console.log(s_id);
-        sample_id.push(s_id);
+        console.log(s_id[0]);
+        sample_id.push(s_id[0]);
     });
  
     console.log(sample_id);
@@ -55,7 +55,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
 //=================================================================
     //Makes the array vertical hopefully...
-    let v_names_array = sliced_values(samples_array);
+    // let v_names_array = sliced_values(samples_array);
     
 //=================================================================
     //Append data into dropdown list
@@ -73,7 +73,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     }
 
     //Load dropdown
-    append_dropdown(names_array);
+    append_dropdown(sample_id);
 
 
 
