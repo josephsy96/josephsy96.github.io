@@ -1,7 +1,7 @@
 //Data arrays
-let names_array = [];
-let metadata_array = [];
-let samples_array = [];
+let names_array = names;
+let metadata_array = meta;
+let samples_array = sample;
 
 
 //Import samples.json
@@ -9,13 +9,13 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 
     //Push Objects into universal arrays
     let names = sample_data.names;
-        names_array.push(names);
+        // names_array.push(names);
 
     let meta = sample_data.metadata;
-        metadata_array.push(meta);
+        // metadata_array.push(meta);
 
     let sample = sample_data.samples;
-        samples_array.push(sample);
+        // samples_array.push(sample);
     });
 //=================================================================
     //log arrays 
@@ -25,9 +25,9 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 //=================================================================
     let sample_id = [];
 
-    samples_array.forEach((s_id) => {
+    names_array.forEach((s_id) => {
         console.log(s_id);
-        sample_id.push(s_id.id);
+        sample_id.push(s_id);
     });
  
     console.log(sample_id);
@@ -59,9 +59,9 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     
 //=================================================================
     //Append data into dropdown list
-    function append_dropdown(id, value) {
+    function append_dropdown(value) {
         
-        let sel_data = d3.select(id);
+        let sel_data = d3.select("#selDataset");
 
         // sel_data.html(" ");
 
@@ -73,7 +73,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     }
 
     //Load dropdown
-    append_dropdown("#selDataset", v_names_array);
+    append_dropdown(names_array);
 
 
 
