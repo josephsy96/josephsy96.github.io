@@ -24,12 +24,19 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     function sliced_values(name_list) {
         let iter_value = name_list;
         let sliced_name = [];
-        iter_value.forEach((nm) => {
+        // iter_value.forEach((nm) => {
+        //     let n_index = iter_value[nm];
+        //     if (sliced_name.indexOf(n_index) == -1) {
+        //         sliced_name.push(n_index);
+        //     }
+        // });
+        
+        for (let nm = 0; nm < sliced_name.length; nm++) {
             let n_index = iter_value[nm];
             if (sliced_name.indexOf(n_index) == -1) {
                 sliced_name.push(n_index);
             }
-        });
+        }
         return sliced_name;
     }
 
@@ -41,7 +48,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
         
         let sel_data = d3.select(id);
 
-        sel_data.html(" ");
+        // sel_data.html(" ");
 
         value.forEach((n) => {
             console.log(n);
