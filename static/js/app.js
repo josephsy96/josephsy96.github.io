@@ -7,7 +7,7 @@ let sample = data.samples;
 d3.json("json_data/samples.json").then(function(sample_data) {
 
     //Push Objects into universal arrays
-    data = sample_data;
+    let data = sample_data;
         
     return data;
 });
@@ -56,7 +56,6 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     
 
 
-console.log(names);
 
  //Append data into dropdown list
 //  function append_dropdown(value) {
