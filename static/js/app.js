@@ -30,8 +30,8 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     let sample_id = [];
 
     names_array.forEach((s_id) => {
-        console.log(s_id[0]);
-        sample_id.push(s_id[0]);
+        console.log(s_id);
+        sample_id.push(s_id);
     });
  
     console.log(sample_id);
