@@ -30,11 +30,11 @@ d3.json("json_data/samples.json").then(function(sample_data) {
     let name_id = [];
 
     names.forEach((s_id) => {
-        console.log(s_id);
+        // console.log(s_id);
         name_id.push(s_id);
     });
  
-    console.log(sample_id);
+    console.log(name_id);
 //=================================================================
     //slice array so it's not a long line...
     function sliced_values(name_list) {
