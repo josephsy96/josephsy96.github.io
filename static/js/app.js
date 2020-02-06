@@ -1,16 +1,18 @@
-//Declare global variables
-let names = data.names;
-let meta = data.metadata;
-let sample = data.samples;
 
 //Import samples.json
-d3.json("json_data/samples.json").then(function(sample_data) {
+let belly_data = d3.json("json_data/samples.json").then(function(sample_data) {
 
     //Push Objects into universal arrays
     let data = sample_data;
         
     return data;
 });
+
+//Declare global variables
+let names = belly_data.names;
+let meta = belly_data.metadata;
+let sample = belly_data.samples;
+
 //=================================================================
     //log arrays 
     console.log(names);
