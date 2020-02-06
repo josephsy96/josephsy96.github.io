@@ -60,7 +60,7 @@ d3.json("json_data/samples.json").then(function(sample_data) {
 //=================================================================
     //Makes the array vertical hopefully...
     let v_names_array = sliced_values(sample_id);
-    
+    console.log(v_names_array);
 //=================================================================
     //Append data into dropdown list
     function append_dropdown(value) {
