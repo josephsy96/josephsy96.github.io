@@ -66,7 +66,7 @@ let selection = d3.select("#selDataset").node().value;
 
 //Update values on change
 function change_value(v) {
-    let selection_value = v.node().value;
+    let selection_value = v.value;
     console.log(selection_value);
 
     optionChanged();
