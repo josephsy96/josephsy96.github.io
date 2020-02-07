@@ -1,6 +1,7 @@
 
 //Import samples.json
-let belly_data = d3.json("json_data/samples.json").then(function(sample_data) {
+function optionChanged() {
+    d3.json("json_data/samples.json").then(function(sample_data) {
 
     //Push Objects into universal arrays
     let names = sample_data.names;
@@ -46,20 +47,31 @@ let belly_data = d3.json("json_data/samples.json").then(function(sample_data) {
     }
 
     // //Load dropdown
-    append_dropdown(names);
+    // append_dropdown(names);
 
-    let selection = optionChanged();
-    //Update values on change
-    function change_value(v) {
-        let selection_value = v.value;
-        console.log(selection_value);
-    }
+    // let selection = d3.select("#selDataset").node().value;
+    // //Update values on change
+    // function change_value(v) {
+    //     let selection_value = v.node().value;
+    //     console.log(selection_value);
+    // }
 
-    change_value(selection);
+    // change_value(selection);
 
 });
+}
     
 
+let selection = d3.select("#selDataset").node().value;
 
+//Update values on change
+function change_value(v) {
+    let selection_value = v.node().value;
+    console.log(selection_value);
+
+    optionChanged();
+}
+
+change_value(selection);
 
 
