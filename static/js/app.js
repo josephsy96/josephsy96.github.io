@@ -9,10 +9,10 @@ function belly_data() {
     let sample = sample_data.samples;   
     
 //=================================================================
-    //log arrays 
-    console.log(names);
-    console.log(meta);
-    console.log(sample);
+    //log arrays  
+    console.log(names[0]);
+    console.log(meta[0]);
+    console.log(sample[0]);
 //=================================================================
 
     //Append data into dropdown list
@@ -26,14 +26,37 @@ function belly_data() {
                 opt.text(n);
         });
     }
-
     // //Load dropdown
     append_dropdown(names);
+
+    let sel_value = d3.select("#selDataset").node().value;
+
+    function demo_info_graph(d) {
+
+        let selection_name = d.id;
+        //grab demographic info
+        let demo_list = [];
+        for (let info = 0; info < selection_name.length; info++) {
+            if (d[info] == sel_value) {
+                demo_list.push(d);
+            }
+        }
+
+        let demo_panel = d3.select("#sample-metadata");
+        console.log(demo_list);
+        
+    
+    }
+
+    demo_info_graph(meta);
+
 });
+
 }
-
-
+//=================================================================
+//set a global selection (if that even makes sense...)
 let selection = d3.select("#selDataset").node().value;
+//=================================================================
 
 //Update values on change
 function optionChanged(v) {
@@ -44,5 +67,4 @@ function optionChanged(v) {
 }
 
 optionChanged(selection);
-
 
