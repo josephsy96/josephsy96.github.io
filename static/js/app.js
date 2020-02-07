@@ -47,7 +47,7 @@ function optionChanged() {
     }
 
     // //Load dropdown
-    // append_dropdown(names);
+    append_dropdown(names);
 
     // let selection = d3.select("#selDataset").node().value;
     // //Update values on change
