@@ -37,7 +37,7 @@ let selection = d3.select("#selDataset").node().value;
 
 //Update values on change
 function optionChanged(v) {
-    let selection_value = v.value;
+    let selection_value = v;
     console.log(selection_value);
 
     belly_data();
