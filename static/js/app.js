@@ -40,7 +40,7 @@ function belly_data() {
 
         for (let info = 0; info < m.length; info++) {
             // console.log(m[info]);
-                if (m[info] === sel_value) {
+                if (m[info.id] === sel_value) {
                 let md = m[info];
                 return md;
             } 
@@ -48,7 +48,7 @@ function belly_data() {
          
     }
 
-    console.log(demo_info_graph(meta));
+    demo_info_graph(meta)
 
 });
 
