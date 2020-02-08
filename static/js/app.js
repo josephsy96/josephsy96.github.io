@@ -32,40 +32,8 @@ function belly_data() {
     let sel_value = d3.select("#selDataset").node().value;
 
     console.log(sel_value);
-
-    // function demo_info_graph(d) {
-
-    //     console.log(d);
-    //     let selection_name = d.id;
-    //     console.log(selection_name);
-    //     //grab demographic info
-    //     let demo_list = [];
-        
-    //     if (d.id === sel_value) {
-    //         demo_list.push(d.id);
-    //     }
-
-    //     let demo_panel = d3.select("#sample-metadata");
-    //     console.log(demo_list);   
-    // }
-
-    // demo_info_graph(meta);
-
-});
-
-}
-//=================================================================
-//set a global selection (if that even makes sense...)
-let selection = d3.select("#selDataset").node().value;
-//=================================================================
-
-//Update values on change
-function optionChanged(v) {
-    let selection_value = v;
-    console.log(selection_value);
-
-    belly_data();
-    //=================================================================
+    
+    //================================================================= 
     function demo_info_graph(d) {
 
         console.log(d);
@@ -81,10 +49,24 @@ function optionChanged(v) {
         let demo_panel = d3.select("#sample-metadata");
         console.log(demo_list);   
     }
-    //=================================================================
+
     demo_info_graph(meta);
 
-    
+});
+
+}
+//=================================================================
+//set a global selection (if that even makes sense...)
+let selection = d3.select("#selDataset").node().value;
+//=================================================================
+
+//Update values on change
+function optionChanged(v) {
+    let selection_value = v;
+    console.log(selection_value);
+
+    belly_data();
+    //=================================================================  
 }
 
 optionChanged(selection);
