@@ -41,8 +41,9 @@ function belly_data() {
         //grab demographic info
         let demo_list = [];
         for (let info = 0; info < meta.length; info++) {
+            console.log(meta[info]);
         if (meta[info] === sel_value) {
-            demo_list.push(meta);
+            demo_list.push(meta[info]);
         }
     }
 
