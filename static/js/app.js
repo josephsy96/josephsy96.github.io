@@ -35,19 +35,24 @@ function belly_data() {
     console.log(sel_value);
 
     //================================================================= 
-    function demo_info_graph(m) {   
-        //grab demographic info
+    //grab demographic info
+    function demo_info_graph(m_value) {   
+    
         let meta_selection = d3.select("#sample-metadata");
 
-        let meta_id = m.id;
+        //Filter id value
+        let meta_id = m_value.filter(md => md.id === sel_value);
         console.log(meta_id);
 
-        m.forEach((metas) => {
-            let meta_tbody = meta_selection.append("tbody");
-            let meta_row = meta_tbody.append("tr");
+        //Filtered id array
+        let filtered_meta = meta_id.map(meta_id_pull => meta_id_pull);
+
+        filtered_meta.forEach((metas) => {
+            let meta_ul = meta_selection.append("ul");
+            // let meta_row = meta_tbody.append("tr");
             Object.entries(metas).forEach(([key, value]) => {
-                let meta_cell = meta_row.append("td");
-                meta_cell.text(value);
+                let meta_li = meta_ul.append("li");
+                meta_li.text(value);
             });
         });
 
