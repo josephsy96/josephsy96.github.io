@@ -33,22 +33,23 @@ function belly_data() {
 
     console.log(sel_value);
 
-    function demo_info_graph(d) {
+    // function demo_info_graph(d) {
 
-        console.log(d);
-        let selection_name = d.id;
-        //grab demographic info
-        let demo_list = [];
+    //     console.log(d);
+    //     let selection_name = d.id;
+    //     console.log(selection_name);
+    //     //grab demographic info
+    //     let demo_list = [];
         
-        if (d.id === sel_value) {
-            demo_list.push(d);
-        }
+    //     if (d.id === sel_value) {
+    //         demo_list.push(d.id);
+    //     }
 
-        let demo_panel = d3.select("#sample-metadata");
-        console.log(demo_list);   
-    }
+    //     let demo_panel = d3.select("#sample-metadata");
+    //     console.log(demo_list);   
+    // }
 
-    demo_info_graph(meta);
+    // demo_info_graph(meta);
 
 });
 
@@ -64,6 +65,26 @@ function optionChanged(v) {
     console.log(selection_value);
 
     belly_data();
+    //=================================================================
+    function demo_info_graph(d) {
+
+        console.log(d);
+        let selection_name = d.id;
+        console.log(selection_name);
+        //grab demographic info
+        let demo_list = [];
+        
+        if (d.id === sel_value) {
+            demo_list.push(d.id);
+        }
+
+        let demo_panel = d3.select("#sample-metadata");
+        console.log(demo_list);   
+    }
+    //=================================================================
+    demo_info_graph(meta);
+
+    
 }
 
 optionChanged(selection);
