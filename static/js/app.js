@@ -37,8 +37,19 @@ function belly_data() {
     //================================================================= 
     function demo_info_graph(m) {   
         //grab demographic info
+        let meta_selection = d3.select("#sample-metadata");
+
+        m.forEach((metas) => {
+            let meta_tbody = meta_selection.append("tbody");
+            let meta_row = meta_tbody.append("tr");
+            Object.defineProperties(metas).forEach(([key,value]) => {
+                let meta_cell = meta_row.append("td");
+                meta_cell.text(key, value);
+            });
+        });
+
         for (let i = 0; i < m.length; i++) {
-            console.log(m[i.id]); //This part works
+            console.log(m[i]); //This part works
                 if (m[i.id] === sel_value) {
                 return console.log(m[i]);
             } 
@@ -46,7 +57,7 @@ function belly_data() {
          
     }
 
-    demo_info_graph(meta)
+    demo_info_graph(meta);
 
 });
 
