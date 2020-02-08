@@ -1,5 +1,6 @@
 
 //Import samples.json
+
 function belly_data() {
     d3.json("json_data/samples.json").then(function(sample_data) {
 
@@ -37,7 +38,6 @@ function belly_data() {
     function demo_info_graph() {
 
         
-        console.log(selection_name);
         let d = meta.id;
         //grab demographic info
         let demo_list = [];
