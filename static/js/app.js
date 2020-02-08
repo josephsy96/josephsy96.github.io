@@ -41,27 +41,27 @@ function belly_data() {
         let meta_selection = d3.select("#sample-metadata");
 
         //Filter id value
-        let meta_id = m_value.filter(md => md.id === sel_value);
-        console.log(meta_id);
+        // let meta_id = m_value.filter(md => md[value] === sel_value);
+        // console.log(meta_id);
 
-        //Filtered id array
-        let filtered_meta = meta_id.map(meta_id_pull => meta_id_pull);
+        // //Filtered id array
+        // let filtered_meta = meta_id.map(meta_id_pull => meta_id_pull);
 
-        filtered_meta.forEach((metas) => {
-            let meta_ul = meta_selection.append("ul");
-            // let meta_row = meta_tbody.append("tr");
-            Object.entries(metas).forEach(([key, value]) => {
-                let meta_li = meta_ul.append("li");
-                meta_li.text(value);
-            });
-        });
+        // filtered_meta.forEach((metas) => {
+        //     let meta_ul = meta_selection.append("ul");
+        //     // let meta_row = meta_tbody.append("tr");
+        //     Object.entries(metas).forEach(([key, value]) => {
+        //         let meta_li = meta_ul.append("li");
+        //         meta_li.text(value);
+        //     });
+        // });
 
-        // for (let i = 0; i < m.length; i++) {
-        //     console.log(m[i]); //This part works
-        //         if (m[i] === sel_value) {
-        //         return console.log(m[i]);
-        //     } 
-        // }
+        for (let i = 0; i < m.length; i++) {
+            console.log(m[i]); //This part works
+                if (m.hasOwnProperty(value) === sel_value) {
+                return console.log(m[i]);
+            } 
+        }
          
     }
 
