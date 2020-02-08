@@ -68,31 +68,47 @@ function belly_data() {
 
         Object.entries(otu).forEach(([key,otu_value]) =>{
             if (otu_value.id === sel_value) {
-                console.log(otu_value);
+                console.log(otu_value.sample_values);
 
-                let new_otu_sample = otu_value.sample_values;
-                let otu_id = otu_value.id;
+                let new_otu_sample = otu_value.sample_values; 
 
+                let otu_id = otu_value.otu_ids.slice(0,10);
+                    console.log(otu_id);
+
+                let list = [];
+                let otu_label_id =  otu_id.forEach((io) => {
+                    let lm = "OTU " + '' + io;
+                    list.push(lm);
+                    console.log(lm); 
+                });
+
+                console.log(list);
+                 
+                let otu_names = otu_value.otu_labels.slice(0,10);
 
                 console.log(new_otu_sample);
+
                 //sort sample values
                 let top_otu = new_otu_sample.sort((a,b) => {
                     a.sample_values > b.sample_values ? 1 : -1;
-                }).slice(0,10);
-                console.log(top_otu);
+                }).slice(0,10).reverse();
+            
+
 
                 let otu_trace = {
                     x: top_otu,
-                    y: otu_id,
-                    type: "bar"
+                    y: list.reverse(),
+                    text: otu_names,
+                    type: "bar",
+                    orientation: "h"
                 };
 
                 let otu_data = [otu_trace];
 
                 let hor_bar_layout = {
                     title: "Top OTU Sample Values",
-                    xaxis: { title : "OTU ID"},
-                    yaxis: { title : "Number of Samples"}
+                    yaxis: { title : "OTU ID"},
+                    xaxis: { title : "Number of Samples"}
                 };
 
                 Plotly.newPlot("bar", otu_data, hor_bar_layout);
