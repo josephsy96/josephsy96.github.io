@@ -77,7 +77,7 @@ function belly_data() {
 
                 //Creates the stupid labels that didn't work earlier
                 let list = [];
-                let otu_label_id =  otu_id.forEach((io) => {
+                otu_id.forEach((io) => {
                     let lm = "OTU " + '' + io;
                     list.push(lm);
                     console.log(lm); 
@@ -119,6 +119,10 @@ function belly_data() {
     }
 
     build_bar_plot(sample);
+//=================================================================
+    function Bubble_Chart(bubble) {
+
+    }
 
 });}
 
