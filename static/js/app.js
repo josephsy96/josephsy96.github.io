@@ -38,10 +38,9 @@ function belly_data() {
     function demo_info_graph() {
 
         
-        let d = meta.id;
         //grab demographic info
         let demo_list = [];
-        for (let info = 0; info < d.length; info++) {
+        for (let info = 0; info < meta.length; info++) {
         if (meta.id === sel_value) {
             demo_list.push(meta);
         }
