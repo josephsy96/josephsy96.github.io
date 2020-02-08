@@ -37,11 +37,10 @@ function belly_data() {
     //================================================================= 
     function demo_info_graph(m) {   
         //grab demographic info
-
-        for (let info = 0; info < m.length; info++) {
-            // console.log(m[info]);
-                if (m[info.id] === sel_value) {
-                return console.log(m[info]);
+        for (let i = 0; i < m.length; i++) {
+            console.log(m[i.id]); //This part works
+                if (m[i.id] === sel_value) {
+                return console.log(m[i]);
             } 
         }
          
