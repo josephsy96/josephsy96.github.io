@@ -61,11 +61,35 @@ function belly_data() {
     //runs function to populate demographics box
     demo_info_graph(meta);
 //================================================================= 
+    function build_bar_plot(otu) {
+        console.log(otu[0]);
+
+        let bars = d3.select("#bar");
+
+        Object.entries(otu).forEach(([key,otu_value]) =>{
+            if (otu_value.id === sel_value) {
+                console.log(otu_value);
+
+                let new_otu_sample = otu_value.sample_values;
+
+                console.log(new_otu_sample);
+                //sort sample values
+                let top_otu = new_otu_sample.sort((a,b) => {
+                    a.sample_values > b.sample_values ? 1 : -1;
+                }).slice(0,10);
+                console.log(top_otu);
 
 
-});
+            }
+        })
 
-}
+
+    }
+
+    build_bar_plot(sample);
+
+});}
+
 //=================================================================
 //set a global selection (if that even makes sense...)
 let selection = d3.select("#selDataset").node().value;
