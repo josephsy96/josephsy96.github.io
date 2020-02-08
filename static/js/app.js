@@ -39,11 +39,12 @@ function belly_data() {
         //grab demographic info
 
         for (let info = 0; info < m.length; info++) {
-            console.log(m[info]);
+            // console.log(m[info]);
                 if (m[info] === sel_value) {
                 let md = m[info];
                 return md;
             }
+        return md; 
         }
         console.log(md);
          
