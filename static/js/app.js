@@ -35,23 +35,22 @@ function belly_data() {
     console.log(sel_value);
 
     //================================================================= 
-    function demo_info_graph() {
-
-        
+    function demo_info_graph(m) {   
         //grab demographic info
+
         let demo_list = [];
-        for (let info = 0; info < meta.length; info++) {
-            console.log(meta[info]);
-        if (meta[info] === sel_value) {
-            demo_list.push(meta[info]);
+
+        for (let info = 0; info < m.length; info++) {
+            console.log(m[info]);
+                if (m[info] === sel_value) {
+                demo_list.push(m[info]);
+            }
         }
+        console.log(demo_list);
+         
     }
 
-        let demo_panel = d3.select("#sample-metadata");
-        console.log(demo_list);   
-    }
-
-    demo_info_graph();
+    demo_info_graph(meta);
 
 });
 
