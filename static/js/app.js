@@ -12,7 +12,7 @@ function belly_data() {
     //log arrays  
     console.log(names[0]);
     console.log(meta[0]);
-    console.log(sample[0]);
+    console.log(sample[0]); 
 //=================================================================
 
     //Append data into dropdown list
@@ -38,11 +38,12 @@ function belly_data() {
 
         
         console.log(selection_name);
+        let d = meta.id;
         //grab demographic info
         let demo_list = [];
         for (let info = 0; info < d.length; info++) {
         if (meta.id === sel_value) {
-            demo_list.push(d.id);
+            demo_list.push(meta);
         }
     }
 
@@ -63,7 +64,7 @@ let selection = d3.select("#selDataset").node().value;
 //Update values on change
 function optionChanged(v) {
     let selection_value = v;
-    console.log(selection_value);
+    console.log(selection_value); 
 
     belly_data();
     //=================================================================  
