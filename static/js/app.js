@@ -57,7 +57,7 @@ function belly_data() {
         // });
 
         for (let i = 0; i < m_value.length; i++) {
-            console.log(m[i]); //This part works
+            // console.log(m_value[i]); //This part works
                 if (m_value.hasOwnProperty(value) === sel_value) {
                 return console.log(m_value[i]);
             } 
