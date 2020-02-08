@@ -41,8 +41,7 @@ function belly_data() {
         for (let info = 0; info < m.length; info++) {
             // console.log(m[info]);
                 if (m[info.id] === sel_value) {
-                let md = m[info];
-                return md;
+                console.log(m[info]);
             } 
         }
          
