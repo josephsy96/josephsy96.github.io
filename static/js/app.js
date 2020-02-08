@@ -35,6 +35,7 @@ function belly_data() {
 
     function demo_info_graph(d) {
 
+        console.log(d);
         let selection_name = d.id;
         //grab demographic info
         let demo_list = [];
