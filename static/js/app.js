@@ -41,7 +41,7 @@ function belly_data() {
         
         let meta_selection = d3.select("#sample-metadata");
         //Filter id value
-        let meta_id = m_value.filter(md => md === sel_value);
+        let meta_id = m_value.filter(md => md.id === sel_value);
         console.log(meta_id);
 
         //Filtered id array
