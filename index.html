@@ -6,10 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
+  <style>
+    * {
+      font-family: 'Oswald', sans-serif;
+    }
+    ul {
+      padding-left: 10px !important;
+    }
+    ul li {
+      list-style-type: none;
+    }
+  </style>
 
   <div class="container">
     <div class="row">
@@ -19,7 +31,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
@@ -28,7 +40,7 @@
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+        <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
       <div class="col-md-5">
