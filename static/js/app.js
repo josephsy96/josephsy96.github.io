@@ -34,15 +34,14 @@ function belly_data() {
     console.log(sel_value);
 
     //================================================================= 
-    function demo_info_graph(d) {
+    function demo_info_graph() {
 
-        console.log(d.id);
-        let selection_name = d.id;
+        
         console.log(selection_name);
         //grab demographic info
         let demo_list = [];
         for (let info = 0; info < d.length; info++) {
-        if (d.id === sel_value) {
+        if (meta.id === sel_value) {
             demo_list.push(d.id);
         }
     }
@@ -51,7 +50,7 @@ function belly_data() {
         console.log(demo_list);   
     }
 
-    demo_info_graph(meta);
+    demo_info_graph();
 
 });
 
