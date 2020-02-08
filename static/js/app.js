@@ -38,11 +38,9 @@ function belly_data() {
         let selection_name = d.id;
         //grab demographic info
         let demo_list = [];
-        for (let info = 0; info < d.length; info++) {
-            if (d[info] === sel_value) {
-                console.log("data appending");
-                demo_list.push(d);
-            }
+        
+        if (d.id === sel_value) {
+            demo_list.push(d);
         }
 
         let demo_panel = d3.select("#sample-metadata");
