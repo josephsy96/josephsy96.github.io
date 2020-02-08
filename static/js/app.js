@@ -37,11 +37,12 @@ function belly_data() {
     //================================================================= 
     //grab demographic info
     function demo_info_graph(m_value) {   
-    
-        let meta_selection = d3.select("#sample-metadata");
-
-        //Filter id value
-        // let meta_id = m_value.filter(md => md[value] === sel_value);
+  
+        let parse_meta = JSON.parse(m_value);
+        console.log(parse_meta.id);
+        // let meta_selection = d3.select("#sample-metadata");
+        // //Filter id value
+        // let meta_id = m_value.filter(md => md === sel_value);
         // console.log(meta_id);
 
         // //Filtered id array
@@ -56,12 +57,6 @@ function belly_data() {
         //     });
         // });
 
-        for (let i = 0; i < m_value.length; i++) {
-            // console.log(m_value[i]); //This part works
-                if (m_value.hasOwnProperty(value) === sel_value) {
-                return console.log(m_value[i]);
-            } 
-        }
          
     }
 
