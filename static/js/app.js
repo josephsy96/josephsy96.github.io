@@ -27,14 +27,14 @@ function belly_data() {
                 opt.text(n);
         });
     }
-    // //Load dropdown
+    // //Load dropdown values
     append_dropdown(names);
 
     let sel_value = d3.select("#selDataset").node().value;
 
     console.log(sel_value);
 
-    //================================================================= 
+//================================================================= 
     //grab demographic info
     function demo_info_graph(m_value) {     
         console.log(sel_value);
@@ -42,9 +42,12 @@ function belly_data() {
         //The demographic info box appends and outputs
         let meta_selection = d3.select("#sample-metadata");
 
+        //refreshes the data
         meta_selection.html(" ");
 
+        //Appends array of objects based on conditional 
         Object.entries(m_value).forEach(([key,t_value]) =>{
+            //conditional statement
             if (t_value.id === parseInt(sel_value)) {
                 console.log(t_value);
                 let meta_ul = meta_selection.append("ul");
@@ -55,8 +58,10 @@ function belly_data() {
             }
         });       
     }
-
+    //runs function to populate demographics box
     demo_info_graph(meta);
+//================================================================= 
+
 
 });
 
