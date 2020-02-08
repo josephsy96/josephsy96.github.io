@@ -38,15 +38,13 @@ function belly_data() {
     function demo_info_graph(m) {   
         //grab demographic info
 
-        let demo_list = [];
-
         for (let info = 0; info < m.length; info++) {
             console.log(m[info]);
                 if (m[info] === sel_value) {
-                demo_list.push(m[info]);
+                let md = m[info];
             }
         }
-        console.log(demo_list);
+        console.log(md);
          
     }
 
