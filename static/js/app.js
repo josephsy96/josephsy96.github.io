@@ -39,7 +39,7 @@ function belly_data() {
         //grab demographic info
         let meta_selection = d3.select("#sample-metadata");
 
-        let meta_id = m.id.data;
+        let meta_id = m.id;
         console.log(meta_id);
 
         m.forEach((metas) => {
