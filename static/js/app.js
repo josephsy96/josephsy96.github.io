@@ -43,14 +43,12 @@ function belly_data() {
                 if (m[info] === sel_value) {
                 let md = m[info];
                 return md;
-            }
-        return md; 
+            } 
         }
-        console.log(md);
          
     }
 
-    demo_info_graph(meta);
+    console.log(demo_info_graph(meta));
 
 });
 
