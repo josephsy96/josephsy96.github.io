@@ -71,10 +71,11 @@ function belly_data() {
                 console.log(otu_value.sample_values);
 
                 let new_otu_sample = otu_value.sample_values; 
-
+                //So much room for error, but will fix later on
                 let otu_id = otu_value.otu_ids.slice(0,10);
                     console.log(otu_id);
 
+                //Creates the stupid labels that didn't work earlier
                 let list = [];
                 let otu_label_id =  otu_id.forEach((io) => {
                     let lm = "OTU " + '' + io;
@@ -84,7 +85,8 @@ function belly_data() {
 
                 console.log(list);
                  
-                let otu_names = otu_value.otu_labels.slice(0,10);
+                //Hover labels for OTUs
+                let otu_names = otu_value.otu_labels.slice(0,10).reverse();
 
                 console.log(new_otu_sample);
 
@@ -93,8 +95,6 @@ function belly_data() {
                     a.sample_values > b.sample_values ? 1 : -1;
                 }).slice(0,10).reverse();
             
-
-
                 let otu_trace = {
                     x: top_otu,
                     y: list.reverse(),
@@ -112,7 +112,6 @@ function belly_data() {
                 };
 
                 Plotly.newPlot("bar", otu_data, hor_bar_layout);
-
             }
         })
 
