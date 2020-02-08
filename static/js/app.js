@@ -38,10 +38,11 @@ function belly_data() {
     //grab demographic info
     function demo_info_graph(m_value) {   
         
+        let m_parse = parseInt(meta);
         
         let meta_selection = d3.select("#sample-metadata");
         //Filter id value
-        let meta_id = m_value.filter(md => md.id === sel_value);
+        let meta_id = m_parse.filter(md => md.id === sel_value);
         console.log(meta_id);
 
         //Filtered id array
