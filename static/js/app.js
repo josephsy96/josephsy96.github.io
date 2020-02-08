@@ -42,7 +42,7 @@ function belly_data() {
         m.forEach((metas) => {
             let meta_tbody = meta_selection.append("tbody");
             let meta_row = meta_tbody.append("tr");
-            Object.defineProperties(metas).forEach(([key,value]) => {
+            Object.entries(metas).forEach(([key,value]) => {
                 let meta_cell = meta_row.append("td");
                 meta_cell.text(key, value);
             });
