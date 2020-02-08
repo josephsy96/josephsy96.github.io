@@ -71,6 +71,8 @@ function belly_data() {
                 console.log(otu_value);
 
                 let new_otu_sample = otu_value.sample_values;
+                let otu_id = otu_value.id;
+
 
                 console.log(new_otu_sample);
                 //sort sample values
@@ -79,6 +81,21 @@ function belly_data() {
                 }).slice(0,10);
                 console.log(top_otu);
 
+                let otu_trace = {
+                    x: top_otu,
+                    y: otu_id,
+                    type: "bar"
+                };
+
+                let otu_data = [otu_trace];
+
+                let hor_bar_layout = {
+                    title: "Top OTU Sample Values",
+                    xaxis: { title : "OTU ID"},
+                    yaxis: { title : "Number of Samples"}
+                };
+
+                Plotly.newPlot("bar", otu_data, hor_bar_layout);
 
             }
         })
