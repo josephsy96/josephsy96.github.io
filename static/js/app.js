@@ -32,19 +32,20 @@ function belly_data() {
     let sel_value = d3.select("#selDataset").node().value;
 
     console.log(sel_value);
-    
+
     //================================================================= 
     function demo_info_graph(d) {
 
-        console.log(d);
+        console.log(d.id);
         let selection_name = d.id;
         console.log(selection_name);
         //grab demographic info
         let demo_list = [];
-        
+        for (let info = 0; info < d.length; info++) {
         if (d.id === sel_value) {
             demo_list.push(d.id);
         }
+    }
 
         let demo_panel = d3.select("#sample-metadata");
         console.log(demo_list);   
