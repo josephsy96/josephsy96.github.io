@@ -122,8 +122,70 @@ function belly_data() {
 //=================================================================
     function Bubble_Chart(bubble) {
 
+        //Creates random colors
+        function getRandomColor() {
+            let color_values = '0123456789ABCDEF';
+            let color = '#';
+            for (let c = 0; c < 6; c++) {
+              color += color_values[Math.floor(Math.random() * 16)];
+            }
+            return color;
+          }
+
+
+        //=================================================================
+          Object.entries(bubble).forEach(([key,bubble_value]) =>{
+            if (bubble_value.id === sel_value) {
+
+                let new_otu_sample = bubble_value.sample_values; 
+
+
+                //So much room for error, but will fix later on
+                let otu_id = bubble_value.otu_ids;
+                    console.log(otu_id);
+
+                //Hover Text Labels
+                let otu_names = bubble_value.otu_labels;
+
+                console.log(new_otu_sample);
+
+                let color_list = [];
+                otu_id.forEach((a) =>{
+                   let lm = getRandomColor();
+                   color_list.push(lm);
+                });
+
+                console.log(color_list);
+
+
+                let bubble_trace = {
+                    x: otu_id,
+                    y: new_otu_sample,
+                    text: otu_names,
+                    mode: 'markers',
+                    marker: {
+                        color: color_list,
+                        size: new_otu_sample
+                    }
+                };
+
+                let otu_data = [bubble_trace];
+
+                let bubble_layout = {
+                    title: "OTU Samples",
+                    xaxis: { title : "OTU ID"},
+                    yaxis: { title : "Number of Samples"}
+
+                };
+
+                Plotly.newPlot("bubble", otu_data, bubble_layout);
+            }
+        })
+
+
     }
 
+    Bubble_Chart(sample);
 });}
 
 //=================================================================
