@@ -1,0 +1,222 @@
+/*
+============================
+Table of Contents:
+
+1. Universal Elements
+
+2. Menu
+
+3. Container
+
+4. Fade-In Page
+============================
+*/
+
+/*
+============================
+1. Universal Elements
+============================
+*/
+
+:root {
+    --bg:  #364549;
+    --bg-accent: #46646C;
+    --text-color: white;
+    --f-weight: 400;
+}
+
+* {
+    font-family: 'Lora','serif';
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/*
+============================
+2. Menu
+============================
+*/
+
+#menu {
+    position: absolute;
+    background: none;
+    height: 60px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#menu h2 {
+    position: absolute;
+    padding: 8px 20px;
+    transform: translateY(7px);
+    width: 12%;
+    color: white;
+    font-weight: 100;
+    margin-left: 1em;
+}
+
+#menu ul {
+    float: right !important;
+}
+
+#menu li {
+    padding: 20px 10px;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#menu li a {
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 50px;
+    border: 1px solid white;
+    color: white !important;
+    transition: 0.9s;
+}
+
+#menu li a:hover {
+    cursor: pointer;
+    transform-origin: center !important;
+    border-radius: 20px;
+    color: var(--bg) !important;
+    background-color: white;
+}
+
+/*
+============================
+3. Container
+============================
+*/
+
+main {
+    z-index: 3;
+}
+
+.top-photo {
+    display: flex;
+    min-height: 1000px;
+    width: 100%;
+    background: url(group.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#welcome {
+    position: relative;
+    height: 110px;
+    font-size: 80px;
+    color: white;
+    right: -150px;
+    transition: 1.8s ease-in-out;
+    overflow: hidden;
+    transform-origin: right !important;
+    transform: translate(12em, 4em);
+}
+
+#welcome.active { 
+    right: 0px;
+}
+
+#home {
+    position: relative;
+    height: 110px;
+    font-size: 80px;
+    color: white;
+    right: -150px;
+    transition: 1.5s ease-out;
+    overflow: hidden;
+    transform-origin: right !important;
+    transform: translate(10em, 5em);
+}
+
+#home.active { 
+    right: -50px;
+}
+
+ section p {
+    position: relative;
+    color: var(--bg) !important;
+    font-size: 15px;
+    justify-content: center;
+}
+
+#p {
+    text-indent: 40px;
+}
+
+/*
+============================
+4. Fade-In Page
+============================
+*/
+body {
+    animation: fadeIn ease 9s;
+    -webkit-animation: fadeIn ease 9s;
+    -moz-animation: fadeIn ease 9s;
+    -o-animation: fadeIn ease 9s;
+    -ms-animation: fadeIn ease 9s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}
+
+/*
+============================
+5. Mobile Design
+============================
+*/
+
+@media (max-width: 1280px) {
+
+    #welcome, #home {
+        font-size: 50px;
+    }
+
+}
