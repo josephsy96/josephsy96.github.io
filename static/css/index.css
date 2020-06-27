@@ -8,9 +8,11 @@ Table of Contents:
 
 2. Container
 
-3. Media Queries 
+3. Footer
 
-4. Fade-In Page
+4. Media Queries 
+
+5. Fade-In Page
 
 ===================================
 */
@@ -47,6 +49,21 @@ img {
 }
 
 span {
+    color: white;
+}
+
+form {
+    color: white;
+}
+
+footer {
+    transform: translateY(5em);
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 12em;
+    background-color: #202020;
     color: white;
 }
 
@@ -104,7 +121,7 @@ End of Menu Styling
 
 
 .container {
-    height: 200vh;
+    height: 120vh;
     transform: translateY(5em);
 }
 
@@ -129,17 +146,6 @@ End of Menu Styling
     font-size: 80px;
 } */
 
-#motto {
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    transition: 1.5s;
-}
-
-#motto.active {
-    font-size: 40px;
-}
 
 .about {
     margin-top: 10em;
@@ -160,13 +166,78 @@ End of Menu Styling
 
 /*
 ============================
-3. Media Queries
+3. Footer
+============================
+*/
+
+.footer-left {
+    transform: translateY(1em);
+    margin-left: 50px;
+}
+
+.social-media {
+    font-size: 30px;
+}
+
+.social-links {
+    margin-top: 5px;
+}
+
+.social-links > a:hover {
+    transition: 0.5s;
+    color: #E553E1 !important;
+}
+
+.social-links {
+    font-size: 20px;
+}
+
+.copyright {
+    font-size: 10px;
+    color: grey;
+}
+
+.email {
+    transform: translateY(-2em);
+    width: 20%;
+    margin: auto;
+}
+
+.email p > a:hover {
+    transition: 0.5s;
+    color: #E553E1 !important;
+}
+
+.footer-right{
+    display: block;
+}
+
+.footer-right p {
+    float: right;
+    margin-right: 50px;
+    transform: translateY(-10em);
+}
+
+.footer-about {
+    width: 30%;
+    font-size: 10px;
+    color: grey;
+}
+
+.footer-about span {
+    font-size: 20px;
+    color: white !important;
+}
+
+/*
+============================
+4. Media Queries
 ============================
 */
 
 /*
 ============================
-4. Fade-In Page
+5. Fade-In Page
 ============================
 */
 
