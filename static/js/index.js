@@ -1,6 +1,12 @@
 //On load animations
 history.scrollRestoration = "manual";
 
+//turns off "Confirm Form Resubmission"
+if(window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+}
+
+
 window.onbeforeunload = function() {
     window.scrollTo(0,0); //on refresh the page starts at the top
 }
@@ -64,3 +70,18 @@ window.onload = function() {
         }
     }
 };
+
+// //Send email via PHP with Ajax
+// function send_email() {
+//     let url = "./email.php";
+
+//     new Ajax.Request(url, {
+//         onComplete:function(transport) {
+//             let feedback = transport.responseText.evalJSON();
+
+//             if(feedback.result == 0) {
+//                 alert("Email was not able to send. Please try again.");
+//             }
+//         }
+//     });
+// }

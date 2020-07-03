@@ -54,10 +54,11 @@ span {
 
 form {
     color: white;
+    z-index: 3;
 }
 
 footer {
-    transform: translateY(5em);
+    transform: translateY(14em);
     position: relative;
     left: 0;
     bottom: 0;
@@ -65,6 +66,20 @@ footer {
     height: 12em;
     background-color: #202020;
     color: white;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+}
+
+input {
+    outline: none;
+}
+
+textarea {
+    outline: none;
 }
 
 /*
@@ -121,7 +136,7 @@ End of Menu Styling
 
 
 .container {
-    height: 120vh;
+    height: 70vh;
     transform: translateY(5em);
 }
 
@@ -132,6 +147,67 @@ End of Menu Styling
 
 .dif-text > .wrap {
     border-right: solid white 0.08em;
+}
+
+
+form h1 {
+    font-size: 50px;
+}
+
+form label {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#name, #email {
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    padding: 5px;
+    background-color: #202020;
+    color: white !important;
+    border: 1px solid #E553E1;
+}
+
+#t-name, #t-email, #t-message {
+    margin-top: 10px;
+    float: left;
+}
+
+#message {
+    width: 100%;
+    height: 50%;
+    resize: none;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    padding: 5px;
+    background-color: #202020;
+    color: white !important;
+    border: 1px solid #E553E1;
+}
+
+#submit, #clear {
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    padding: 7px 50px;
+    border: 1px solid #E553E1;
+    font-size: 20px;
+    background-color: black;
+    color: white !important;
+    transition: 0.7s;
+}
+
+#clear {
+    margin-left: 1em;
+}
+
+#submit:hover, #clear:hover {
+    background-color: #E553E1;
+    border-radius: 20px;
 }
 
 /* #anax_welcome {
@@ -171,7 +247,7 @@ End of Menu Styling
 */
 
 .footer-left {
-    transform: translateY(1em);
+    transform: translateY(2em);
     margin-left: 50px;
 }
 
@@ -183,8 +259,11 @@ End of Menu Styling
     margin-top: 5px;
 }
 
+.social-links > a {
+    transition: 0.7s;
+}
+
 .social-links > a:hover {
-    transition: 0.5s;
     color: #E553E1 !important;
 }
 
@@ -198,13 +277,13 @@ End of Menu Styling
 }
 
 .email {
-    transform: translateY(-2em);
-    width: 20%;
+    transform: translateY(-1em);
+    width: 15%;
     margin: auto;
 }
 
 .email p > a:hover {
-    transition: 0.5s;
+    transition: 0.7s;
     color: #E553E1 !important;
 }
 
@@ -215,7 +294,7 @@ End of Menu Styling
 .footer-right p {
     float: right;
     margin-right: 50px;
-    transform: translateY(-10em);
+    transform: translateY(-9em);
 }
 
 .footer-about {
