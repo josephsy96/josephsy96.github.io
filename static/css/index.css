@@ -334,8 +334,38 @@ and (max-width : 320px) {
 
 @media (max-width: 880px) {
 
+    #abg {
+        font-size: 20px;
+    }
+
+    #info {
+        font-size: 15px;
+        font-weight: 100;
+    }
+
+    form {
+        transform: translateY(10em);
+    }
+
+    #name, #email, #message {
+        font-size: 10px;
+    }
+
+    form h1 {
+        font-size: 20px;
+    }
+
+    form label {
+        font-size: 10px;
+    }
+
+    #submit, #clear {
+        font-size: 10px;
+    }
+
     hr {
-       margin: auto;
+        margin-top: 5px;
+        margin: auto;
     }
 
     footer {
@@ -346,6 +376,7 @@ and (max-width : 320px) {
         height: 22em;
         background-color: #202020;
         color: white;
+        transform: translateY(36em);
     }
 
     .footer-left {
@@ -380,8 +411,12 @@ and (max-width : 320px) {
     }
  
 	.social-links > p {
-		margin-left: 0;
-	}
+        margin-left: 0;
+    }
+    
+    .social-links > p > a {
+        font-size: 20px;
+    }
  
 }
 
