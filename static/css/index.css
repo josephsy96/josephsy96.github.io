@@ -344,7 +344,7 @@ and (max-width : 320px) {
     }
 
     form {
-        transform: translateY(10em);
+        transform: translateY(15em);
     }
 
     #name, #email, #message {
@@ -376,7 +376,7 @@ and (max-width : 320px) {
         height: 22em;
         background-color: #202020;
         color: white;
-        transform: translateY(36em);
+        transform: translateY(30em);
     }
 
     .footer-left {
