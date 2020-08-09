@@ -21,7 +21,12 @@
     </head>
     <body>
         <header>
-            <nav id="menu">
+            <nav class="hamburger" id="menu">
+                <div class="ham_lines" onclick="show()">
+                    <div class="line"></div>
+                    <div id="animate-line" class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <ul>
                     <li><a href="#mottos">About</a></li>                        
                     <li><a href="https://www.instagram.com/anaxclan/" target="_blank">Instagram</a></li>
@@ -62,7 +67,7 @@
         </form>
         <footer class="footer-responsive">
             <div class="footer-left">
-                <span class="social-media">Social Media</span>
+                <span class="social-media" id="sc">Social Media</span>
                 <hr width="17%">
                 <p class="social-links">
                     <a id="insta" href="https://www.instagram.com/anaxclan/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
