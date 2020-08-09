@@ -336,12 +336,12 @@ and (max-width : 320px) {
 
     #menu {
         position: fixed;
-        width: 300px;
+        width: 250px;
         height: 100% !important;
         background-color: #303030;
         margin-top: 0px;
         z-index: 3;
-        left: -350px;
+        left: -250px;
         transition: 0.5s;
     }
 
@@ -373,7 +373,7 @@ and (max-width : 320px) {
     #menu .ham_lines {
         position: absolute;
         top: 30px;
-        left: 380px;
+        left: 300px;
     }
 
     #menu .ham_lines:hover {
@@ -383,12 +383,27 @@ and (max-width : 320px) {
     .ham_lines .line {
         width: 40px;
         height: 3px;
-        background: white;
+        background: #E553E1;
         display: block;
         margin-top: 6px;
         transition: 0.9s;
         position: relative;
         overflow: hidden;
+    }
+
+    #menu.active .ham_lines #animate-line {
+        width: 0px;
+        height: 0px;
+    }
+
+    #menu.active .ham_lines #top-line {
+        transform: rotate(45deg);
+        transform-origin: 25% -20%;
+    }
+
+    #menu.active .ham_lines #bottom-line {
+        transform: rotate(-45deg);
+        transform-origin: 15% 170%;
     }
 
     .ham_lines:hover .line {
