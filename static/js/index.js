@@ -1,6 +1,11 @@
 //On load animations
 history.scrollRestoration = "manual";
 
+//hamburger menu
+function show() {
+    document.getElementById('menu').classList.toggle('active');
+}
+
 //turns off "Confirm Form Resubmission"
 if(window.history.replaceState) {
     window.history.replaceState(null, null, window.location.href);

@@ -334,6 +334,67 @@ and (max-width : 320px) {
 
 @media (max-width: 880px) {
 
+    #menu {
+        position: fixed;
+        width: 300px;
+        height: 100% !important;
+        background-color: #303030;
+        margin-top: 0px;
+        z-index: 3;
+        left: -350px;
+        transition: 0.5s;
+    }
+
+    #menu.active {
+        left: 0;
+    }
+
+    #menu ul li {
+        list-style: none;
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        padding: 25px 2em;
+        position: absolute, fixed;
+    }
+
+    #menu ul li a {
+        border: none;
+        padding: 20px 1em;
+    }
+
+    #menu ul li a:hover {
+        cursor: pointer;
+        border-radius: 0%;
+        background-color: transparent;
+        color: #E553E1;
+    }
+
+    #menu .ham_lines {
+        position: absolute;
+        top: 30px;
+        left: 380px;
+    }
+
+    #menu .ham_lines:hover {
+        cursor: pointer;
+    }
+
+    .ham_lines .line {
+        width: 40px;
+        height: 3px;
+        background: white;
+        display: block;
+        margin-top: 6px;
+        transition: 0.9s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ham_lines:hover .line {
+        background: #E553E1;
+    }
+
     #abg {
         font-size: 20px;
     }
@@ -373,7 +434,7 @@ and (max-width : 320px) {
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 22em;
+        height: 24em;
         background-color: #202020;
         color: white;
         transform: translateY(30em);
