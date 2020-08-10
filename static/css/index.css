@@ -350,6 +350,7 @@ and (max-width : 320px) {
     }
 
     #menu ul li {
+        display: inline-block;
         list-style: none;
         color: white;
         font-weight: lighter;
@@ -397,11 +398,15 @@ and (max-width : 320px) {
     }
 
     #menu.active .ham_lines #top-line {
+        -webkit-transform: rotate(44.9deg);
+        -webkit-transform-origin: 25% -20%;
         transform: rotate(45deg);
         transform-origin: 25% -20%;
     }
 
     #menu.active .ham_lines #bottom-line {
+        -webkit-transform: rotate(-44.9deg);
+        -webkit-transform-origin: 15% 170%;
         transform: rotate(-45deg);
         transform-origin: 15% 170%;
     }
