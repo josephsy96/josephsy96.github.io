@@ -45,7 +45,7 @@ a {
 
 img {
     height: auto;
-    width: 50%;
+    width: 30%;
 }
 
 span {
@@ -111,14 +111,14 @@ textarea {
     font-size: 20px;
     font-weight: 200;
     padding: 7px 50px;
-    border: 1px solid #E553E1;
+    border: 1px solid #15f4ee;
     color: white;
     transition: 0.7s;
 }
 
 #menu li a:hover {
     border-radius: 20px;
-    background-color: #E553E1;
+    background-color: #15f4ee;
 }
 
 /*
@@ -167,7 +167,7 @@ form label {
     padding: 5px;
     background-color: #202020;
     color: white !important;
-    border: 1px solid #E553E1;
+    border: 1px solid #15f4ee;
 }
 
 #t-name, #t-email, #t-message {
@@ -185,7 +185,7 @@ form label {
     padding: 5px;
     background-color: #202020;
     color: white !important;
-    border: 1px solid #E553E1;
+    border: 1px solid #15f4ee;
 }
 
 #submit, #clear {
@@ -194,7 +194,7 @@ form label {
     font-weight: 100;
     cursor: pointer;
     padding: 7px 50px;
-    border: 1px solid #E553E1;
+    border: 1px solid #15f4ee;
     font-size: 20px;
     background-color: black;
     color: white !important;
@@ -206,7 +206,7 @@ form label {
 }
 
 #submit:hover, #clear:hover {
-    background-color: #E553E1;
+    background-color: #15f4ee;
     border-radius: 20px;
 }
 
@@ -264,7 +264,7 @@ form label {
 }
 
 .social-links > a:hover {
-    color: #E553E1 !important;
+    color: #15f4ee !important;
 }
 
 .social-links {
@@ -284,7 +284,7 @@ form label {
 
 .email p > a:hover {
     transition: 0.7s;
-    color: #E553E1 !important;
+    color: #15f4ee !important;
 }
 
 .footer-right{
@@ -384,7 +384,7 @@ and (max-width : 320px) {
     .ham_lines .line {
         width: 40px;
         height: 3px;
-        background: #E553E1;
+        background: #15f4ee;
         display: block;
         margin-top: 6px;
         transition: 0.9s;
@@ -412,7 +412,7 @@ and (max-width : 320px) {
     }
 
     .ham_lines:hover .line {
-        background: #E553E1;
+        background: #15f4ee;
     }
 
     #abg {

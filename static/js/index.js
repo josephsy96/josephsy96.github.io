@@ -3,7 +3,7 @@ history.scrollRestoration = "manual";
 
 //hamburger menu
 function show() {
-    document.getElementById('menu').classList.toggle('active');
+        document.getElementById('menu').classList.toggle('active');
 }
 
 //turns off "Confirm Form Resubmission"
