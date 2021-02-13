@@ -1,654 +1,91 @@
-/*
-===================================
+/* 
+=====================
 Author: Joseph Yi
-Project: Anax Clan Homepage
+Date Created: 11/15/2020
 
-Table of Contents:
 1. Universal Elements
 
-2. Container
+2. Site Text
 
-3. Footer
-
-4. Media Queries 
-
-5. Fade-In Page
-
-===================================
+3. Enter Button
+=====================
 */
 
 /*
-===================================
+=====================
 1. Universal Elements
-===================================
+=====================
 */
-html {
-    width: 100%;
-    scroll-behavior: smooth;
-}
 
 * {
-    margin: 0;
-    padding: 0;   
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
-    background-color: black;
-    font-family: 'Oswald', sans-serif;
-}
-
-
-a {
-    text-decoration: none !important;
-    color: inherit !important;
-}
-
-img {
-    height: auto;
-    width: 30%;
-}
-
-span {
-    color: white;
-}
-
-form {
-    color: white;
-    z-index: 3;
-}
-
-footer {
-    transform: translateY(14em);
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 12em;
-    background-color: #202020;
-    color: white;
-}
-
-form {
-    margin: auto;
-    width: 50%;
-    height: 60vh;
-}
-
-input {
-    outline: none;
-}
-
-textarea {
-    outline: none;
+  font-family: 'Raleway', sans-serif;  
 }
 
 /*
-===================================
-2. Container
-===================================
+=====================
+2. Site Text
+=====================
 */
 
-#menu {
-    position: absolute;
-    background: none;
-    margin-top: 10px;
-    width: 100%;
-    color: white;
-}
-
-#menu ul {
-    float: right;
-    margin-right: 2em;
-}
-
-#menu li {
-    display: inline-block;
-    padding: 20px 10px;
-}
-
-#menu li a {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 200;
-    padding: 7px 50px;
-    border: 1px solid #15f4ee;
-    color: white;
-    transition: 0.7s;
-}
-
-#menu li a:hover {
-    border-radius: 20px;
-    background-color: #15f4ee;
-}
-
-/*
-End of Menu Styling
-*/
-
-#logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateY(8em);
-    overflow: hidden;
-    transition: 1.2s ease-in-out;
-}
-
-
-.container {
-    height: 70vh;
-    transform: translateY(5em);
-}
-
-.welcome {
-    margin: auto;
-    width: 10%;
-}
-
-.dif-text > .wrap {
-    border-right: solid white 0.08em;
-}
-
-
-form h1 {
-    font-size: 50px;
-}
-
-form label {
-    font-size: 20px;
-    font-weight: 100;
-}
-
-#name, #email {
-    width: 100%;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100;
-    padding: 5px;
-    background-color: #202020;
-    color: white !important;
-    border: 1px solid #15f4ee;
-}
-
-#t-name, #t-email, #t-message {
-    margin-top: 10px;
-    float: left;
-}
-
-#message {
-    width: 100%;
-    height: 50%;
-    resize: none;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100;
-    padding: 5px;
-    background-color: #202020;
-    color: white !important;
-    border: 1px solid #15f4ee;
-}
-
-#submit, #clear {
-    margin-top: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100;
-    cursor: pointer;
-    padding: 7px 50px;
-    border: 1px solid #15f4ee;
-    font-size: 20px;
-    background-color: black;
-    color: white !important;
-    transition: 0.7s;
-}
-
-#clear {
-    margin-left: 1em;
-}
-
-#submit:hover, #clear:hover {
-    background-color: #15f4ee;
-    border-radius: 20px;
-}
-
-/* #anax_welcome {
-    font-size: 70px;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    transition: 2.5s ease-in-out;
-}
-
-#anax_welcome.active {
-    font-size: 80px;
-} */
-
-
-.about {
-    margin-top: 10em;
-    color: white;
-}
-
-#abg {
-    font-size: 50px;
-    margin: auto;
-    width: 50%;
-}
-
-#info {
-    margin-top: 10px;
-    margin: auto;
-    width: 50%;
-}
-
-/*
-============================
-3. Footer
-============================
-*/
-
-.footer-left {
-    transform: translateY(2em);
+#joe {
+    font-size: 300px;
+    font-weight: 500;
     margin-left: 50px;
 }
 
-.social-media {
-    font-size: 30px;
-}
-
-.social-links {
-    margin-top: 5px;
-}
-
-.social-links > a {
-    transition: 0.7s;
-}
-
-.social-links > a:hover {
-    color: #15f4ee !important;
-}
-
-.social-links {
-    font-size: 20px;
-}
-
-.copyright {
-    font-size: 10px;
-    color: grey;
-}
-
-.email {
-    transform: translateY(-1em);
-    width: 15%;
-    margin: auto;
-}
-
-.email p > a:hover {
-    transition: 0.7s;
-    color: #15f4ee !important;
-}
-
-.footer-right{
-    display: block;
-}
-
-.footer-right p {
-    float: right;
-    margin-right: 50px;
-    transform: translateY(-9em);
-}
-
-.footer-about {
-    width: 30%;
-    font-size: 10px;
-    color: grey;
-}
-
-.footer-about span {
-    font-size: 20px;
-    color: white !important;
-}
-
 /*
-============================
-4. Media Queries
-============================
- Smartphones (portrait and landscape) -----------
-*/
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-
-}
-
-@media (max-width: 880px) {
-
-    #menu {
-        position: fixed;
-        width: 250px;
-        height: 100% !important;
-        background-color: #303030;
-        margin-top: 0px;
-        z-index: 3;
-        left: -250px;
-        transition: 0.5s;
-    }
-
-    #menu.active {
-        left: 0;
-    }
-
-    #menu ul li {
-        display: inline-block;
-        list-style: none;
-        color: white;
-        font-weight: lighter;
-        font-size: 20px;
-        padding: 25px 2em;
-        position: absolute, fixed;
-    }
-
-    #menu ul li a {
-        border: none;
-        padding: 20px 1em;
-    }
-
-    #menu ul li a:hover {
-        cursor: pointer;
-        border-radius: 0%;
-        background-color: transparent;
-        color: #E553E1;
-    }
-
-    #menu .ham_lines {
-        position: absolute;
-        top: 30px;
-        left: 300px;
-    }
-
-    #menu .ham_lines:hover {
-        cursor: pointer;
-    }
-
-    .ham_lines .line {
-        width: 40px;
-        height: 3px;
-        background: #15f4ee;
-        display: block;
-        margin-top: 6px;
-        transition: 0.9s;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #menu.active .ham_lines #animate-line {
-        width: 0px;
-        height: 0px;
-    }
-
-    #menu.active .ham_lines #top-line {
-        -webkit-transform: rotate(44.9deg);
-        -webkit-transform-origin: 25% -20%;
-        transform: rotate(45deg);
-        transform-origin: 25% -20%;
-    }
-
-    #menu.active .ham_lines #bottom-line {
-        -webkit-transform: rotate(-44.9deg);
-        -webkit-transform-origin: 15% 170%;
-        transform: rotate(-45deg);
-        transform-origin: 15% 170%;
-    }
-
-    .ham_lines:hover .line {
-        background: #15f4ee;
-    }
-
-    #abg {
-        font-size: 20px;
-    }
-
-    #info {
-        font-size: 15px;
-        font-weight: 100;
-    }
-
-    form {
-        transform: translateY(22em);
-    }
-
-    #name, #email, #message {
-        font-size: 10px;
-    }
-
-    form h1 {
-        font-size: 20px;
-    }
-
-    form label {
-        font-size: 10px;
-    }
-
-    #submit, #clear {
-        font-size: 10px;
-    }
-
-    hr {
-        margin-top: 5px;
-        margin: auto;
-    }
-
-    footer {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 24em;
-        background-color: #202020;
-        color: white;
-        transform: translateY(30em);
-    }
-
-    .footer-left {
-        margin: 0;
-    }
- 
-	.footer-responsive .footer-left, .footer-responsive .footer-right{
-        display: block;
-		margin-bottom: 40px;
-		text-align: center;
-    }
-
-    .email {
-        width: 50%;
-    }
-
-    .email p {
-        transform: translateY(1em);
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-right {
-        transform: translateY(6em);
-    }
-
-    .footer-right p {
-        margin-right: 0;
-        float: none;
-        width: 50%;
-        margin: auto;
-    }
- 
-	.social-links > p {
-        margin-left: 0;
-    }
-    
-    .social-links > p > a {
-        font-size: 20px;
-    }
- 
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-
-
-}
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-
-    .email {
-        font-size: 14px;
-        transform: translateY(-1em);
-        margin: auto;
-    }
-
-    .footer-right p {
-        margin-right: 50px;
-        transform: translateY(-9em);
-    }
-
-    .footer-about {
-        width: 30%;
-        font-size: 10px;
-    }
-}
-
-@media only screen 
-and (max-width : 1224px) {
-
-    .footer-left {
-        transform: translateY(3em);
-    }
-
-    .footer-left > span {
-        font-size: 20px;
-    }
-
-    .footer-left > p {
-        font-size: 15px;
-    }
-
-    .footer-left > .copyright {
-        font-size: 8px;
-    }
-
-    .email {
-        font-size: 10px;
-        transform: translateY(2em);
-        margin: auto;
-    }
-
-    .footer-right p {
-        transform: translateY(-7em);
-    }
-
-    .footer-about {
-        width: 30%;
-        font-size: 7px;
-    }
-}
-
-
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-
-}
-
-/*
-============================
-5. Fade-In Page
-============================
+=====================
+3. Enter Button
+=====================
 */
 
-body {
-    animation: fadeIn ease 9s;
-    -webkit-animation: fadeIn ease 9s;
-    -moz-animation: fadeIn ease 9s;
-    -o-animation: fadeIn ease 9s;
-    -ms-animation: fadeIn ease 9s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-  }
+#enter-btn {
+  text-align: center;
+  position: relative;
+  font-size: 75px;
+  font-weight: 200;
+  margin-left: 50px;
+  padding: 20px 20px;
+  width: 30%;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+rect {
+  fill: none;
+  stroke: black;
+  stroke-width: 10px;
+  stroke-dasharray: 422, 0;
+}
+
+#enter-btn:hover a{
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all .75s cubic-bezier(0.19,1,.3,1);
+}
+
+#enter-btn:hover rect {
+  stroke-dasharray: 100, 100;
+  stroke-dashoffset: 50;
+  transition: all 1.0s cubic-bezier(0.19,1,.22,1);
 }

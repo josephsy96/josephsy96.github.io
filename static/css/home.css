@@ -1,0 +1,149 @@
+/* 
+=====================
+Author: Joseph Yi
+Date Created: 11/23/2020
+
+1. Universal Elements
+
+2. Welcome
+--2.1 View Port
+
+3. Content
+=====================
+*/
+
+:root {
+    --main-base: #343434;
+}
+
+/*
+=====================
+1. Universal Elements
+=====================
+*/
+
+* {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+=====================
+2. Welcome
+=====================
+*/
+
+#welcome {
+    margin-top: 5%;
+    font-size: 200px;
+    text-align: center;
+}
+
+#welcome:hover {
+    font-size: 210px;
+}
+
+
+/*
+=====================
+2.1 View Port
+=====================
+*/
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+rect {
+    fill: none;
+    stroke: black;
+    stroke-width: 10px;
+    stroke-dasharray: 422, 0;
+}
+
+#view-port {
+    margin-top: 1em;
+    position: relative;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px 20px;
+    width: 30%;
+}
+
+#view-port:hover a {
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all .75s cubic-bezier(0.19,1,.3,1);
+}
+
+#view-port:hover rect {
+    stroke-dasharray: 100, 100;
+    stroke-dashoffset: 50;
+    transition: all 1.0s cubic-bezier(0.19,1,.22,1);
+}
+
+/*
+=====================
+3. Content
+=====================
+*/
+
+.content {
+    margin-top: 25%;
+    background-color: var(--main-base);
+    height: 75em;
+    width: 100%;
+}
+
+.skills h2 {
+    transform: translateY(1em);
+    text-align: center;
+    color: white;
+    font-size: 75px;
+    font-weight: 200;
+}
+
+.spec-grid {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+}
+
+#data-graph {
+    transform: translateY(50px);
+    font-size: 100px;
+}
+
+#data-graph:hover {
+    font-size: 120px;
+    transition: all 0.75s cubic-bezier(0.19,1,0.22,1);
+}
+
+#grid-1:hover, #grid-2:hover, #grid-3:hover, #grid-4:hover {
+    color: #00FFFD;
+    text-shadow:1px 1px 10px #00FFFD;
+    font-weight: 500;
+    transition: all 1.0s cubic-bezier(0.19,1,0.22,1);
+}
+
